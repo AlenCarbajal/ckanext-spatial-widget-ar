@@ -1,6 +1,6 @@
 from ckan.plugins import SingletonPlugin, implements, IConfigurer
 
-class SpatialWidgetPlugin(SingletonPlugin):
+class SpatialWidgetArPlugin(SingletonPlugin):
     implements(IConfigurer)
 
     def update_config(self, config):
