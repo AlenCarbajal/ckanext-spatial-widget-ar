@@ -1,0 +1,14 @@
+# spatial_widget_ar-js:
+#   filter: rjsmin
+#   output: ckanext-spatial_widget_ar/%(version)s-spatial_widget_ar.js
+#   contents:
+#     - js/spatial_widget_ar.js
+#   extra:
+#     preload:
+#       - base/main
+
+# spatial_widget_ar-css:
+#   filter: cssrewrite
+#   output: ckanext-spatial_widget_ar/%(version)s-spatial_widget_ar.css
+#   contents:
+#     - css/spatial_widget_ar.css

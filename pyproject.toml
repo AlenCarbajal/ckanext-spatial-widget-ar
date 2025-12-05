@@ -1,0 +1,38 @@
+[project]
+name = "ckanext-spatial-widget-ar"
+version = "0.0.1"
+description = "Extension para añadir interfaz gráfica a spatial"
+readme = "README.md"
+authors = [
+    {name = "Alén Carbajal", email = "acarbajal@sicyt.gob.ar"}
+]
+license = {text = "AGPL"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+
+keywords = [ "CKAN", ]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/AlenCarbajal | datosgobar/ckanext-spatial-widget-ar"
+
+[project.entry-points."ckan.plugins"]
+spatial_widget_ar = "ckanext.spatial_widget_ar.plugin:SpatialWidgetArPlugin"
+
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+filterwarnings = [
+        "ignore::sqlalchemy.exc.SADeprecationWarning",
+        "ignore::sqlalchemy.exc.SAWarning",
+        "ignore::DeprecationWarning",
+]
+addopts = "--ckan-ini test.ini"

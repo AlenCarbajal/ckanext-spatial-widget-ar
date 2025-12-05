@@ -1,0 +1,6 @@
+include README.rst
+include LICENSE
+include requirements.txt
+recursive-include ckanext/spatial_widget_ar *.html *.json *.js *.less *.css *.mo *.yml
+recursive-include ckanext/spatial_widget_ar/migration *.ini *.py *.mako
+recursive-include ckanext/spatial_widget_ar/public *.*
