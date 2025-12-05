@@ -1,8 +1,7 @@
-from ckan.plugins import SingletonPlugin, implements, IConfigurer
+from ckan.plugins import SingletonPlugin, ITemplateHelpers
 
-class SpatialWidgetArPlugin(SingletonPlugin):
-    implements(IConfigurer)
-
-    def update_config(self, config):
-        # Add our templates directory
-        config['ckan.template_directory'] = 'templates'
+class SpatialWidgetArPlugin(SingletonPlugin, ITemplateHelpers):
+    def get_helpers(self):
+        return {
+            'spatial_widget_ar': lambda: True
+        }
